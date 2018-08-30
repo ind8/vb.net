@@ -1,0 +1,11 @@
+Public Class Form1
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+		Me.Text = "Change Prperties Through Coding"
+		Me.BackColor = Color.Brown
+		Me.Size = New Size(350, 125)
+		Me.Location = New Point(300, 300)
+		Me.MaximizeBox = False
+
+	End Sub
+End Class

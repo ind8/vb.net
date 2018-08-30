@@ -1,0 +1,23 @@
+Public Class Form1
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+		ListBox1.Items.Add("Sunday")
+		ListBox1.Items.Add("Monday")
+		ListBox1.Items.Add("Tuesday")
+		ListBox1.Items.Add("Wednesday")
+		ListBox1.Items.Add("Thursday")
+		ListBox1.Items.Add("Friday")
+		ListBox1.Items.Add("Saturday")
+
+		ListBox1.SelectionMode = SelectionMode.MultiSimple
+	End Sub
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+		Dim obj As Object
+		For Each obj In ListBox1.SelectedItems
+			MsgBox(obj.ToString)
+		Next
+
+	End Sub
+End Class

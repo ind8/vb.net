@@ -1,0 +1,77 @@
+' Tambah combo
+ComboBox1.Items.Add("Sunday")
+ComboBox1.Items.Add("Monday")
+ComboBox1.Items.Add("Tuesday")
+
+' pengaturan pilihan
+comboBox1.Items.Add("test1")
+comboBox1.Items.Add("test2")
+comboBox1.Items.Add("test3")
+comboBox1.SelectedItem = "test3"
+or
+ComboBox1.SelectedItem = ComboBox1.Items(1)
+or
+comboBox1.SelectedIndex = comboBox1.FindStringExact("test3")
+
+'mengmbil nilai
+Dim var As String
+var = ComboBox1.Text
+			Or
+Dim item = Me.comboBox1.GetItemText(Me.comboBox1.SelectedItem)
+MessageBox.Show(item)
+
+'menghapus item
+ComboBox1.Items.RemoveAt(1)
+ComboBox1.Items.Remove("Friday")
+
+'gaya dropdown 
+ComboBox1.DropDownStyle = ComboBoxStyle.DropDown
+
+' dari datasource
+comboBox1.DataSource = ds.Tables(0)
+comboBox1.ValueMember = "au_id"
+comboBox1.DisplayMember = "au_lname"
+
+'memilih index berganti
+Public Class Form1
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ComboBox1.Items.Add("weekdays")
+        ComboBox1.Items.Add("year")
+    End Sub
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        ComboBox2.Items.Clear()
+        If ComboBox1.SelectedItem = "weekdays" Then
+            ComboBox2.Items.Add("Sunday")
+            ComboBox2.Items.Add("Monday")
+            ComboBox2.Items.Add("Tuesday")
+        ElseIf ComboBox1.SelectedItem = "year" Then
+            ComboBox2.Items.Add("2012")
+            ComboBox2.Items.Add("2013")
+            ComboBox2.Items.Add("2014")
+        End If
+    End Sub
+End Class
+
+'mengatur nilai dasar pada combo box 
+comboBox1.SelectedIndex = 6
+
+'contoh :
+Public Class Form1
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		ComboBox1.Items.Add("Sunday")
+		ComboBox1.Items.Add("Monday")
+		ComboBox1.Items.Add("Tuesday")
+		ComboBox1.Items.Add("wednesday")
+		ComboBox1.Items.Add("Thursday")
+		ComboBox1.Items.Add("Friday")
+		ComboBox1.Items.Add("Saturday")
+
+		ComboBox1.SelectedItem = ComboBox1.Items(3)
+	End Sub
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+		Dim var As String
+		var = ComboBox1.Text
+		MsgBox(var)
+	End Sub
+End Class

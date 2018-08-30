@@ -1,0 +1,13 @@
+'FOR EACH Loop usually using when you are in a situation to execute every single element or item in a group (like every single element in an Array, or every single files in a folder or , every character in a String ) , in these type of situation you can use For Each loop.
+
+Public Class Form1
+    Private Sub Button1_Click(ByVal sender As System.Object, 
+	ByVal e As System.EventArgs) Handles Button1.Click
+        Dim siteName As String
+        Dim singleChar As Char
+        siteName = "HTTP://akungeblog.com/"
+        For Each singleChar In siteName
+            MsgBox(singleChar)
+        Next
+    End Sub
+End Class

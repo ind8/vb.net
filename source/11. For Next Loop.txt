@@ -1,0 +1,24 @@
+For var=[startValue] To [endValue] [Step]
+   [loopBody]
+Next [var]
+
+For var=startValue To endValue [Step]
+   [loopBody]
+   Contition
+   [Exit For]
+Next [var]
+
+
+Public Class Form1
+    Private Sub Button1_Click(ByVal sender As System.Object,
+	ByVal e As System.EventArgs) Handles Button1.Click
+        Dim var As Integer
+        Dim startVal As Integer
+        Dim endVal As Integer
+        startVal = 1
+        endVal = 5
+        For var = startVal To endVal
+            MsgBox("Message Box Shows " &   var &   " Times ")
+        Next var
+    End Sub
+End Class

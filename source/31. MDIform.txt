@@ -1,0 +1,24 @@
+Public Class Form1
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        IsMdiContainer = True
+    End Sub
+
+    Private Sub MenuItem1ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem1ToolStripMenuItem.Click
+        Dim frm2 As New Form2
+        frm2.Show()
+        frm2.MdiParent = Me
+    End Sub
+
+    Private Sub MenuItem2ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2ToolStripMenuItem.Click
+        Dim frm3 As New Form3
+        frm3.Show()
+        frm3.MdiParent = Me
+    End Sub
+
+End Class
+
+' xontoh 
+form.MdiParent = Me
+  form.Dock = DockStyle.Fill
+  form.Show()

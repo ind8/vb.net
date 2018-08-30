@@ -1,0 +1,14 @@
+'While .. End While Loop execute the code body (the source code within While and End while statements ) until it meets the specified condition. The expression is evaluated each time the loop is encountered. If the evaluation result is true, the loop body statements are executed.
+
+
+Public Class Form1
+    Private Sub Button1_Click(ByVal sender As System.Object, 
+	ByVal e As System.EventArgs) Handles Button1.Click
+        Dim counter As Integer
+        counter = 1
+        While (counter <= 10)
+            MsgBox("Counter Now is : "  counter)
+            counter = counter + 1
+        End While
+    End Sub
+End Class

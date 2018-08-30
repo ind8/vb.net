@@ -1,0 +1,18 @@
+' hande error terbagi dua, terstruktur dan tidak terstruktur. kalau terstruktur gunain try and catch kalau yang tidak itu on error goto
+
+'Error GoTo redirect the flow of the program in a given location.
+
+'On Error Resume Next - whenever an error occurred in runtime , skip the statement and continue execution on following statements.
+
+Public Class Form1
+    Private Sub Button1_Click(ByVal sender As System.Object, _
+    ByVal e As System.EventArgs) Handles Button1.Click
+        On Error GoTo nextstep
+        Dim result As Integer
+        Dim num As Integer
+        num = 100
+        result = num / 0
+'nextstep: //dimatikan maka error
+        MsgBox("Control Here")
+    End Sub
+End Class

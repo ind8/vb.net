@@ -1,0 +1,15 @@
+'The CultureInfo class specifies a unique name for each culture, based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with a language and an ISO 3166 two-letter uppercase subculture code associated with a country or region.
+
+Imports System.Threading
+Imports System.Globalization
+
+Public Class Form1
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+		'MessageBox.Show(Thread.CurrentThread.CurrentCulture.Name)
+
+		For Each ci As CultureInfo In CultureInfo.GetCultures(CultureTypes.AllCultures)
+			MsgBox(ci.EnglishName + " - " + ci.Name)
+		Next
+	End Sub
+End Class

@@ -1,0 +1,7 @@
+Public Class Form1
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label1.Text = "This is my first Label"
+        Label1.BorderStyle = BorderStyle.FixedSingle
+        Label1.TextAlign = ContentAlignment.MiddleCenter
+    End Sub
+End Class

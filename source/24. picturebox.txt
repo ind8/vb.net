@@ -1,0 +1,24 @@
+PictureBox1.Image = Image.FromFile("C:\testImage.jpg")
+PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+
+' ukuran
+AutoSize		- Sizes the picture box to the image.
+  CenterImage		- Centers the image in the picture box.
+  Normal	- Places the upper-left corner of the image at upper
+  				left in the picture box
+  StretchImage	- Allows you to stretch the image in code
+
+pictureBox1.ClientSize = New Size(xSize, ySize)
+
+' contoh 
+
+Public Class Form1
+
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+		PictureBox1.Image = Image.FromFile("d:\testImage.jpg")
+		PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+
+	End Sub
+
+End Class

@@ -1,0 +1,59 @@
+Public Class Form1
+
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		TextBox1.Width = 200
+		TextBox1.Height = 50
+		TextBox1.Multiline = True
+	End Sub
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+		Dim var As String
+		var = TextBox1.Text
+		MsgBox(var)
+	End Sub
+
+End Class
+
+lainnya : 
+
+'pengaturan
+TextBox1.Width = 150
+TextBox1.Height = 25
+TextBox1.BackColor = Color.Red
+TextBox1.ForeColor = Color.Gray
+TextBox1.BorderStyle = BorderStyle.FixedSingle
+TextBox1.MaxLength = 25
+TextBox1.ReadOnly = True
+TextBox1.Multiline = True
+TextBox1.PasswordChar = "*"
+
+'baris baru
+TextBox1.Text += "some text here" + "\r\n"
+TextBox1.Text += "some text here" + Environment.NewLine
+
+'konversi integer
+Dim i As Integer
+i = Integer.Parse(TextBox1.Text)
+
+'konversi double
+Dim dbl As Double
+dbl = Double.Parse(TextBox1.Text)
+'
+
+'jika ditekan
+Private Sub TextBox1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
+	If e.KeyCode = Keys.Enter Then
+		MessageBox.Show("Enter key pressed")
+	ElseIf e.KeyCode = Keys.Escape Then
+		MessageBox.Show("Escape key pressed")
+	End If
+End Sub
+
+'jika berubah
+Private Sub TextBox1_TextChanged(ByVal sender As System.Object,
+		ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+    Label1.Text = TextBox1.Text
+End Sub
+
+
+

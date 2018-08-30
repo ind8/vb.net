@@ -1,0 +1,14 @@
+Public Class Form1
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+		Dim firstDate As New System.DateTime(2000, 1, 1)
+		Dim secondDate As New System.DateTime(2000, 5, 31)
+
+		Dim diff As System.TimeSpan = secondDate.Subtract(firstDate)
+		Dim diff1 As System.TimeSpan = secondDate - firstDate
+
+		Dim diff2 As String = (secondDate - firstDate).TotalDays.ToString()
+
+		MsgBox(diff2.ToString())
+	End Sub
+End Class

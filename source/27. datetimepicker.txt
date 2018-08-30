@@ -1,0 +1,22 @@
+Public Class Form1
+
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		DateTimePicker1.Format = DateTimePickerFormat.Short
+		DateTimePicker1.Value = "12/31/2010"
+	End Sub
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+		Dim idate As String
+		idate = DateTimePicker1.Value
+		MsgBox("Selected date is  : " & idate)
+	End Sub
+
+End Class
+
+'format
+DateTimePicker1.Format = DateTimePickerFormat.Short
+
+Dim idate As String
+  idate = DateTimePicker1.Value
+
+DateTimePicker1.Value = "12/31/2010"

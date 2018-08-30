@@ -1,0 +1,44 @@
+Statement
+
+If [your condition here]
+	Your code here
+Else
+	Your code Here
+End If
+
+If [your condition here]
+	Your code here
+ElseIf [your condition here]
+	Your code here
+ElseIf [your condition here]
+	Your code here
+Else
+	Your code Here
+End If
+
+ Public Class Form1
+Private Sub Button1_Click(ByVal sender As System.Object,
+ByVal e As System.EventArgs) Handles Button1.Click
+    Dim totalMarks As Integer
+    totalMarks = 59
+    If totalMarks >= 80 Then
+        MsgBox("Gor Higher First Class ")
+    ElseIf totalMarks >= 60 Then
+        MsgBox("Gor First Class ")
+    ElseIf totalMarks >= 40 Then
+        MsgBox("Just pass only")
+    Else
+        MsgBox("Failed")
+    End If
+End Sub
+End Class
+
+Public Class Form1
+    Private Sub Button1_Click(ByVal sender As System.Object, 
+	ByVal e As System.EventArgs) Handles Button1.Click
+        Dim totalMarks As Integer
+        totalMarks = 39
+    If totalMarks >= 50 Then MsgBox("passed ") Else MsgBox("Failed ")
+    End Sub
+End Class
+

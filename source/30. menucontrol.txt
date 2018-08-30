@@ -1,0 +1,9 @@
+Public Class Form1
+
+    Private Sub MenuItem1ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem1ToolStripMenuItem.Click
+
+        MsgBox("You are selected MenuItem_1")
+
+    End Sub
+
+End Class

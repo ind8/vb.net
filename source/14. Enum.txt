@@ -1,0 +1,27 @@
+When you are in a situation to have a number of constants that are logically related to each other, you can define them together these constants in an enumerator list. An enumerated type is declared using the enum keyword.
+
+' belum lengkap
+
+Public Class Form1
+'deklarasi
+	Enum Temperature
+		Low
+		Medium
+		High
+	End Enum
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+		Dim value As Temperature = Temperature.Medium
+		Select Case value
+			Case Temperature.Low
+				MessageBox.Show("Low Temperature")
+				Exit Select
+			Case Temperature.Medium
+				MessageBox.Show("Mediuam Temperature")
+				Exit Select
+			Case Temperature.High
+				MessageBox.Show("High Temperature")
+				Exit Select
+		End Select
+	End Sub
+End Class

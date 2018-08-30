@@ -1,0 +1,13 @@
+Exceptions are the occurrence of some condition that changes the normal flow of execution . For ex: you programme run out of memory , file does not exist in the given path , network connections are dropped etc. More specifically for better understanding , we can say it as Runtime Errors .
+
+In .NET languages , Structured Exceptions handling is a fundamental part of Common Language Runtime . It has a number of advantages over the On Error statements provided in previous versions of Visual Basic . All exceptions in the Common Language Runtime are derived from a single base class , also you can create your own custom Exception classes. You can create an Exception class that inherits from Exception class .
+
+You can handle Exceptions using Try..Catch statement .
+
+  Try
+	code
+	exit from Try
+  Catch [Exception [As Type]]
+	code - if the exception occurred this code will execute
+	exit from Catch
+

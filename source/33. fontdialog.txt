@@ -1,0 +1,17 @@
+Public Class Form1
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+		Dim dlg As New FontDialog
+		dlg.ShowDialog()
+
+		If dlg.ShowDialog = Windows.Forms.DialogResult.OK Then
+			Dim fontName As String
+			Dim fontSize As Integer
+			fontName = dlg.Font.Name
+			fontSize = dlg.Font.Size
+
+			MsgBox(fontName & "  " & fontSize)
+		End If
+
+	End Sub
+End Class

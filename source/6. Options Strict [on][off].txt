@@ -1,0 +1,16 @@
+Option Strict On
+'Option Strict is prevents program from automatic variable conversions, that is implicit data type conversions . by default option strict is off.
+
+Public Class Form1
+    Private Sub Button1_Click(ByVal sender As System.Object, _
+    ByVal e As System.EventArgs) Handles Button1.Click
+
+        Dim longNum As Long
+        Dim intNum As Integer
+
+        longNum = 12345
+        intNum = longNum
+
+        MsgBox(intNum)
+    End Sub
+End Class

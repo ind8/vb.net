@@ -1,0 +1,26 @@
+' keypress
+Public Class Form1
+    Private Sub TextBox1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        If e.KeyChar = Convert.ToChar(13) Then
+            MsgBox("enter key pressd ")
+        End If
+    End Sub
+End Class
+
+'keydown
+Public Class Form1
+    Private Sub TextBox1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            MsgBox("enter key pressd ")
+        End If
+    End Sub
+End Class
+
+'keyup
+Public Class Form1
+    Private Sub TextBox1_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyUp
+        If e.KeyCode = Keys.Enter Then
+            MsgBox("enter key pressd ")
+        End If
+    End Sub
+End Class

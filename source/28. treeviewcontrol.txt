@@ -1,0 +1,26 @@
+Public Class Form1
+
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+		Dim tNode As TreeNode
+		tNode = TreeView1.Nodes.Add("Websites")
+
+		TreeView1.Nodes(0).Nodes.Add("Net-informations.com")
+		TreeView1.Nodes(0).Nodes(0).Nodes.Add("CLR")
+
+		TreeView1.Nodes(0).Nodes.Add("Vb.net-informations.com")
+		TreeView1.Nodes(0).Nodes(1).Nodes.Add("String Tutorial")
+		TreeView1.Nodes(0).Nodes(1).Nodes.Add("Excel Tutorial")
+
+		TreeView1.Nodes(0).Nodes.Add("Csharp.net-informations.com")
+		TreeView1.Nodes(0).Nodes(2).Nodes.Add("ADO.NET")
+		TreeView1.Nodes(0).Nodes(2).Nodes(0).Nodes.Add("Dataset")
+
+	End Sub
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+		MsgBox(TreeView1.SelectedNode.FullPath)
+
+	End Sub
+End Clas

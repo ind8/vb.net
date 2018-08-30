@@ -1,0 +1,26 @@
+Public Class Form1
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        Label1.Text = DateTime.Now.ToString
+    End Sub
+End Class
+
+Public Class Form1
+    Dim second As Integer
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Timer1.Interval = 1000
+        Timer1.Start() 'Timer starts functioning
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        Label1.Text = DateTime.Now.ToString
+
+        second = second + 1
+        If second >= 10 Then
+            Timer1.Stop() 'Timer stops functioning
+            MsgBox("Timer Stopped....")
+        End If
+
+    End Sub
+
+End Class

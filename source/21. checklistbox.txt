@@ -1,0 +1,22 @@
+Public Class Form1
+
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		CheckedListBox1.Items.Add("Sunday", CheckState.Checked)
+		CheckedListBox1.Items.Add("Monday", CheckState.Unchecked)
+		CheckedListBox1.Items.Add("Tuesday", CheckState.Indeterminate)
+		CheckedListBox1.Items.Add("Wednesday", CheckState.Checked)
+		CheckedListBox1.Items.Add("Thursday", CheckState.Unchecked)
+		CheckedListBox1.Items.Add("Friday", CheckState.Indeterminate)
+		CheckedListBox1.Items.Add("Saturday", CheckState.Indeterminate)
+	End Sub
+
+End Class
+
+'array
+Dim days As String() =  {"Sunday", "Monday", "Tuesday"}
+  checkedListBox1.Items.AddRange(days)
+
+'pengaturan
+CheckedListBox1.Items.Add("Sunday", CheckState.Checked)
+  CheckedListBox1.Items.Add("Monday", CheckState.Unchecked)
+  CheckedListBox1.Items.Add("Tuesday", CheckState.Indeterminate)

@@ -1,0 +1,76 @@
+' penambahan 
+listView1.Columns.Add("ProductName", 100)
+
+' penambahan item
+Dim arr As String() = New String(3) {}
+	Dim itm As ListViewItem
+	'add items to ListView
+	arr(0) = "product_1"
+	arr(1) = "100"
+	arr(2) = "10"
+	itm = New ListViewItem(arr)
+	listView1.Items.Add(itm)
+
+' mendapatkan pilihan item dari list
+productName = listView1.SelectedItems(0).SubItems(0).Text
+
+' sorting
+ListView1.Sorted = True
+
+'penambah checkbox di list
+myListView.CheckBoxes = True
+myListView.Columns.Add(text, width, alignment)
+
+'view property as Details and GridLines property as true and FullRowSelect as true
+ListView1.View = View.Details
+ListView1.GridLines = True
+ListView1.FullRowSelect = True
+
+'contoh 
+Public Class Form1
+
+	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		''Set view property
+		ListView1.View = View.Details
+		ListView1.GridLines = True
+		ListView1.FullRowSelect = True
+
+		'Add column header
+		ListView1.Columns.Add("ProductName", 100)
+		ListView1.Columns.Add("Price", 70)
+		ListView1.Columns.Add("Quantity", 70)
+
+		'Add items in the listview
+		Dim arr(3) As String
+		Dim itm As ListViewItem
+
+		'Add first item
+		arr(0) = "product_1"
+		arr(1) = "100"
+		arr(2) = "10"
+		itm = New ListViewItem(arr)
+		ListView1.Items.Add(itm)
+
+		'Add second item
+		arr(0) = "product_2"
+		arr(1) = "200"
+		arr(2) = "20"
+		itm = New ListViewItem(arr)
+		ListView1.Items.Add(itm)
+
+	End Sub
+
+	Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+		Dim productName As String
+		Dim price As String
+		Dim quantity As String
+
+		productName = ListView1.SelectedItems.Item(0).SubItems(0).Text
+		price = ListView1.SelectedItems.Item(0).SubItems(1).Text
+		quantity = ListView1.SelectedItems.Item(0).SubItems(2).Text
+
+		MsgBox(productName & " , " & price & " , " & quantity)
+
+	End Sub
+End Clas

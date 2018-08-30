@@ -1,0 +1,16 @@
+Public Class Form1
+    Private Sub Button1_Click(ByVal sender As System.Object, 
+		ByVal e As System.EventArgs) Handles Button1.Click
+        Dim check As Boolean
+        check = True
+        MsgBox("The value assigned for check is  : " & check)
+
+        Dim count As Integer
+        count = 100
+        MsgBox("The value holding count is  : " & count)
+
+        Dim str As String
+        str = "String test "
+        MsgBox("The value holding str is  : " & str)
+    End Sub
+End Class
